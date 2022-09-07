@@ -1,4 +1,5 @@
 const { environment } = require('@rails/webpacker')
+const Base = require('@rails/webpacker/package/environments/base')
 const webpack = require("webpack")
 
 environment.plugins.append("Provide", new webpack.ProvidePlugin({
@@ -8,3 +9,4 @@ environment.plugins.append("Provide", new webpack.ProvidePlugin({
 }))
 
 module.exports = environment
+
