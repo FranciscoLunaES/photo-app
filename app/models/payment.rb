@@ -1,5 +1,5 @@
 class Payment < ApplicationRecord
-  attr_accessor :card_number, :card_cvv, :card_expires_month, :card_experies_year
+  attr_accessor :card_number, :card_cvv, :card_expires_month, :card_expires_year
 
   belongs_to :user
 
@@ -12,7 +12,7 @@ class Payment < ApplicationRecord
   end
 
   def process_payment
-    customer = Stripe::Customer.create email: email, card: token
+    customer = Stripe::Customer.create email: email, source: token
 
     Stripe::Charge.create customer: customer.id,
                           amount: 1000,
