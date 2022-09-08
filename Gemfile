@@ -11,7 +11,7 @@ gem 'devise-bootstrap-views'
 gem 'stripe'
 gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
-gem 'fog-core', '2.1.0'
+gem 'fog-aws'
 gem 'mini_magick'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
